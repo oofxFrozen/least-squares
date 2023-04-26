@@ -5,8 +5,8 @@ set title "Least Squares Approximation"
 set xlabel "x"
 set ylabel "y"
 
-set xrange [-10:10]
-set yrange [-10:10]
+set xrange [-20:20]
+set yrange [-20:20]
 
 plot 'results.dat' using 1:2 with points title "Points on Curve", \
      'data.dat' using 1:2 with points title "Data Points"

@@ -549,7 +549,7 @@ vector<double> least_squares(DataMatrix data, int degree)
     vector<double> coefficients = vector<double>(result.n);
     for (int i = 0; i < result.n; ++i)
     {
-        coefficients.at(i) = result[result.n - i - 1][0];
+        coefficients.at(i) = result[i][0];
     }
 
     return coefficients;
@@ -566,7 +566,7 @@ main()
 
     // Generate points on the curve defined by the coefficients
     std::ofstream outfile("results.dat");
-    for (double xi = -10; xi <= 10; xi += 0.1)
+    for (double xi = -20; xi <= 20; xi += 0.1)
     {
         double yi = evaluate_curve(xi, coefficients);
         outfile << xi << " " << yi << std::endl;
